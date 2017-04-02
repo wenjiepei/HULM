@@ -1,0 +1,71 @@
+Training...
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('logsumexp', 'D:\research\HCRF-UGM\logsumexp.m', 0)" style="font-weight:bold">logsumexp</a>
+
+
+In <a href="matlab:helpUtils.errorDocCallback('UGM_logChainFwd', 'D:\research\HCRF-UGM\UGM_logChainFwd.m', 10)" style="font-weight:bold">UGM_logChainFwd</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_logChainFwd.m',10,0)">line 10</a>)
+   logAlpha(n,1:nStates(n)) =
+   logNodePot(n,1:nStates(n))+logsumexp(logMi);
+
+In <a href="matlab:helpUtils.errorDocCallback('UGM_Infer_logChain', 'D:\research\HCRF-UGM\UGM_Infer_logChain.m', 28)" style="font-weight:bold">UGM_Infer_logChain</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_Infer_logChain.m',28,0)">line 28</a>)
+[logAlpha, logZ] = UGM_logChainFwd(logNodePot,logEdgePot,nStates);
+
+In <a href="matlab:helpUtils.errorDocCallback('UGM_HCRF_NLL', 'D:\research\HCRF-UGM\UGM_HCRF_NLL.m', 71)" style="font-weight:bold">UGM_HCRF_NLL</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_HCRF_NLL.m',71,0)">line 71</a>)
+        [nodeBel{iL},edgeBel{iL},logZ(iL)] =
+        inferFunc(nodePot{iL}, edgePot{iL}, edgeStruct);
+
+In <a href="matlab:helpUtils.errorDocCallback('penalizedL2', 'D:\research\HCRF-UGM\train\penalizedL2.m', 9)" style="font-weight:bold">penalizedL2</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\train\penalizedL2.m',9,0)">line 9</a>)
+    [nll,g] = gradFunc(w,varargin{:});
+
+In
+<a href="matlab:helpUtils.errorDocCallback('@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)', '', 0)" style="font-weight:bold">@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)</a>
+
+
+In <a href="matlab:helpUtils.errorDocCallback('minFunc', 'D:\research\HCRF-UGM\minFunc_2009\minFunc.m', 303)" style="font-weight:bold">minFunc</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\minFunc_2009\minFunc.m',303,0)">line 303</a>)
+    [f,g] = funObj(x,varargin{:});
+
+In <a href="matlab:helpUtils.errorDocCallback('arabic_experiment', 'D:\research\HCRF-UGM\arabic_experiment.m', 82)" style="font-weight:bold">arabic_experiment</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\arabic_experiment.m',82,0)">line 82</a>)
+w = minFunc(reglaFunObj,w, options);
+} 
+arabic_experiment
+Training...
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('repmat', 'C:\Program Files\MATLAB\R2013a\toolbox\matlab\elmat\repmat.m', 34)" style="font-weight:bold">repmat</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2013a\toolbox\matlab\elmat\repmat.m',34,0)">line 34</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('UGM_Infer_logChain', 'D:\research\HCRF-UGM\UGM_Infer_logChain.m', 36)" style="font-weight:bold">UGM_Infer_logChain</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_Infer_logChain.m',36,0)">line 36</a>)
+    tmp2 = repmat(logBeta(n+1,1:nStates(n+1)),nStates(n),1);
+
+In <a href="matlab:helpUtils.errorDocCallback('UGM_HCRF_NLL', 'D:\research\HCRF-UGM\UGM_HCRF_NLL.m', 71)" style="font-weight:bold">UGM_HCRF_NLL</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_HCRF_NLL.m',71,0)">line 71</a>)
+        [nodeBel{iL},edgeBel{iL},logZ(iL)] =
+        inferFunc(nodePot{iL}, edgePot{iL}, edgeStruct);
+
+In <a href="matlab:helpUtils.errorDocCallback('penalizedL2', 'D:\research\HCRF-UGM\train\penalizedL2.m', 9)" style="font-weight:bold">penalizedL2</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\train\penalizedL2.m',9,0)">line 9</a>)
+    [nll,g] = gradFunc(w,varargin{:});
+
+In
+<a href="matlab:helpUtils.errorDocCallback('@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)', '', 0)" style="font-weight:bold">@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)</a>
+
+
+In <a href="matlab:helpUtils.errorDocCallback('minFunc', 'D:\research\HCRF-UGM\minFunc_2009\minFunc.m', 303)" style="font-weight:bold">minFunc</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\minFunc_2009\minFunc.m',303,0)">line 303</a>)
+    [f,g] = funObj(x,varargin{:});
+
+In <a href="matlab:helpUtils.errorDocCallback('arabic_experiment', 'D:\research\HCRF-UGM\arabic_experiment.m', 82)" style="font-weight:bold">arabic_experiment</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\arabic_experiment.m',82,0)">line 82</a>)
+w = minFunc(reglaFunObj,w, options);
+} 
+arabic_experiment
+Training...
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('UGM_HCRF_NLL', 'D:\research\HCRF-UGM\UGM_HCRF_NLL.m', 95)" style="font-weight:bold">UGM_HCRF_NLL</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\UGM_HCRF_NLL.m',95,0)">line 95</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('penalizedL2', 'D:\research\HCRF-UGM\train\penalizedL2.m', 9)" style="font-weight:bold">penalizedL2</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\train\penalizedL2.m',9,0)">line 9</a>)
+    [nll,g] = gradFunc(w,varargin{:});
+
+In
+<a href="matlab:helpUtils.errorDocCallback('@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)', '', 0)" style="font-weight:bold">@(w)penalizedL2(w,@UGM_HCRF_NLL,lambda,Xnode,Xedge,y,nodeMap,edgeMap,labelMap,edgeStruct,@UGM_Infer_logChain)</a>
+
+
+In <a href="matlab:helpUtils.errorDocCallback('minFunc', 'D:\research\HCRF-UGM\minFunc_2009\minFunc.m', 303)" style="font-weight:bold">minFunc</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\minFunc_2009\minFunc.m',303,0)">line 303</a>)
+    [f,g] = funObj(x,varargin{:});
+
+In <a href="matlab:helpUtils.errorDocCallback('arabic_experiment', 'D:\research\HCRF-UGM\arabic_experiment.m', 82)" style="font-weight:bold">arabic_experiment</a> (<a href="matlab: opentoline('D:\research\HCRF-UGM\arabic_experiment.m',82,0)">line 82</a>)
+w = minFunc(reglaFunObj,w, options);
+} 
