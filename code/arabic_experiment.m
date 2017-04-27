@@ -112,12 +112,12 @@ else
     fid = fopen(['result' filesep dataset_name filesep num2str(no_hidden) filesep 'accuracy_result_cross_performance_' num2str(lambda) '_' num2str(index_fold) '.txt'], 'w');
 end
 % Measure training error
-trn_err = measure_training_error(train_X, train_T, model);
+trn_err = measure_error(train_X, train_T, model);
 disp(['Classification error (training set): ' num2str(trn_err)]);
 fprintf(fid, '%s\n', ['Classification error (training set): ' num2str(trn_err)]);
 
 % Perform prediction on test set
-test_err = measure_test_error(test_X, test_T, model);
+test_err = measure_error(train_X, train_T, model);
 disp(['Classification error (test set): ' num2str(test_err)]);
 fprintf(fid, '%s\n', ['Classification error (test set): ' num2str(test_err)]);
 fclose(fid);
